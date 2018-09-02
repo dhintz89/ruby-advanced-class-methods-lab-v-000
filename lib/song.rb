@@ -34,7 +34,7 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    if self.all.include?(name)
+    if self.find_by_name(name) == nil
       puts "positive"
       self.find_by_name(name)
     else
