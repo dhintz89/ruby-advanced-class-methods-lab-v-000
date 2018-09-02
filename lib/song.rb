@@ -61,11 +61,9 @@ class Song
     song.save
     song
   end
+  
+  def self.destroy_all
+    self.all.clear
+  end
     
 end
-
-song_1 = Song.create_by_name("Alright")
-
-puts Song.find_or_create_by_name("Alright")
-puts Song.find_or_create_by_name("Hold Tight")
-
