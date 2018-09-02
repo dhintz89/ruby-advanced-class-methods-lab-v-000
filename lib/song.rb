@@ -45,7 +45,11 @@ class Song
     self.all.sort_by {|song| song.name}
   end
   
-  self.new_from_filename(title)
+  self.new_from_filename(filename)
+    filename.remove()
+    song = self.new
+    
+  
     
 end
 
